@@ -24,6 +24,10 @@ hs_err_pid*
 /.metadata/
 
 # Eclipse
-*/.project
-*/.classpath
-*/.settings
+.project
+.classpath
+.settings
+# Maven
+target
+
+.recommenders
