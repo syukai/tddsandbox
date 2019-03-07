@@ -1,9 +1,11 @@
 package com.example.part1;
 
-public abstract class Money {
+public class Money {
 	protected int amount;
 	protected String currency;
-	abstract Money times(int multipulier);
+	Money times(int multiplier) {
+		return new Money(amount * multiplier, currency);
+	}
 //	abstract String currency();
 	
 	Money(int amount, String currency) {
@@ -24,7 +26,12 @@ public abstract class Money {
 	
 	public boolean equals(Object object) {
 		Money money = (Money) object;
-		return this.amount == money.amount && getClass().equals(object.getClass());
+		return this.amount == money.amount &&
+				currency.equals(money.currency);
+	}
+	
+	public String toString() {
+		return amount + " " + currency;
 	}
 
 }
