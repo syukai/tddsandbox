@@ -15,3 +15,8 @@ class TestCaseTest(TestCase):
         test = WasRun("testBrokenMethod")
         result = test.run()
         assert("1 run, 1 failed" == result.summary())
+    def testFailedResultFormatting(self):
+        result = TestResult()
+        result.testStarted()
+        result.testFailed()
+        assert("1 run, 1 failed" == result.summary())
