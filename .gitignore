@@ -30,4 +30,7 @@ hs_err_pid*
 # Maven
 target
 
+# python
+__pycache__
+
 .recommenders
