@@ -1,6 +1,13 @@
 from TestCaseTest import TestCaseTest
+from TestSuite import TestSuite
+from TestResult import TestResult
 
-print(TestCaseTest("testTemplateMethod").run().summary())
-print(TestCaseTest("testResult").run().summary())
-print(TestCaseTest("testFailedResult").run().summary())
-print(TestCaseTest("testFailedResultFormatting").run().summary())
+suite = TestSuite()
+suite.add(TestCaseTest("testTemplateMethod"))
+suite.add(TestCaseTest("testResult"))
+suite.add(TestCaseTest("testFailedResult"))
+suite.add(TestCaseTest("testFailedResultFormatting"))
+suite.add(TestCaseTest("testSuite"))
+result = TestResult()
+suite.run(result)
+print(result.summary())
