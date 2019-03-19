@@ -1,4 +1,4 @@
-package com.example.part1;
+package com.example.part3;
 
 import static org.junit.Assert.fail;
 
