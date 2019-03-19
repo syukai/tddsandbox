@@ -20,6 +20,7 @@ public class FileTest {
 		}
 	}
 	
+	@Test
 	private void saveAs(File file) throws IOException {
 		file.createNewFile();
 	}
